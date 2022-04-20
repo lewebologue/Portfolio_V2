@@ -22,6 +22,7 @@ app.use((req, res, next) => {
 });
 
 app.use(express.json());
-app.use('/api/newForm', require('./routes/form'));
+app.use('/api', require('./routes/form'));
+app.use('/api/auth', require('./routes/user'));
 
 module.exports = app;
