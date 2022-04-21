@@ -1,0 +1,22 @@
+@import '../base/colors.scss';
+@import '../base/fonts.scss';
+
+.topbar--container{
+    background-color: $primary-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-family: lato, 'Courier New', Courier, monospace;
+    height: 2.85rem;
+    .topbar__menu{
+        display: flex;
+        justify-content: space-evenly;
+        a{
+            text-decoration: none;
+            &:hover{
+                color: $background-one;
+            }
+        }
+    }
+}
