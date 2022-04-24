@@ -7,7 +7,7 @@ const mongoConnect = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_
 mongoose.connect(mongoConnect, { 
     useNewUrlParser: true,
     useUnifiedTopology: true })
-    .then(() => console.log('MongoDB Connected'))
+    .then(() => console.log('Connection established'))
     .catch(() => console.log('Error Connecting to MongoDB'));
 
 const app = express();
@@ -24,5 +24,6 @@ app.use((req, res, next) => {
 app.use(express.json());
 app.use('/api', require('./routes/form'));
 app.use('/api/auth', require('./routes/user'));
+app.use('/api/content', require('./routes/content'));
 
 module.exports = app;
