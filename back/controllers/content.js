@@ -7,7 +7,7 @@ exports.createElement = (req, res, next) => {
     delete elementObject._id;
     const element = new Content({
         ...elementObject,
-        //image: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
+        image: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
     })
     element.save()
         .then(() => res.status(201).json({ message: 'Element created',}))
@@ -21,7 +21,7 @@ exports.modifyElement = (req, res, next) => {
                 const contentObject = req.file ?
                     {
                         ...JSON.parse(req.body.content),
-                        //image: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
+                        image: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
                     } : { ...req.body };
                 Content.updateOne({ _id: req.params.id }, { ...contentObject, _id: req.params.id })
                     .then(() => res.status(201).json({ message: 'Element updated !' }))
