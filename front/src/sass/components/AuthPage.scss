@@ -1,4 +1,5 @@
 section{
+	background-color: $background-one;
 	margin: 0;
 	padding: 0;
 	display: flex;
@@ -6,98 +7,15 @@ section{
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-	background: linear-gradient(to bottom, #24e9c1, $background-one, #18a085);
-	img{
-		width: 25rem;
-		margin-bottom: 2rem;
+	.login{
+		padding-top: 12rem;
+		form{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			background-color: white;
+			width: fit-content;
+		}
 	}
-}
-.main{
-    width: 350px;
-    height: 530px;
-    background: #fff;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 5px 20px 50px #000;
-}
-#chk{
-	display: none;
-}
-.signup{
-	position: relative;
-	width:100%;
-	height: 100%;
-}
-label{
-	color: $primary-color;
-	font-size: 2.3em;
-	justify-content: center;
-	display: flex;
-	margin: 60px;
-	font-weight: bold;
-	cursor: pointer;
-	transition: .5s ease-in-out;
-}
-input{
-	width: 60%;
-	height: 20px;
-	background: #e0dede;
-	justify-content: center;
-	display: flex;
-	margin: 20px auto;
-	padding: 10px;
-	border: none;
-	outline: none;
-	border-radius: 5px;
-}
-button{
-	width: 60%;
-	height: 40px;
-	margin: 10px auto;
-	justify-content: center;
-	display: block;
-	color: #fff;
-	background: $primary-color;
-	font-size: 1em;
-	font-weight: bold;
-	margin-top: 20px;
-	outline: none;
-	border: none;
-	border-radius: 5px;
-	transition: .2s ease-in;
-	cursor: pointer;
-}
-button:hover{
-	background: lighten($color: $primary-color, $amount: 10);
-}
-.login{
-	height: 460px;
-	background: #eee;
-	border-radius: 60% / 10%;
-	transform: translateY(-180px);
-	transition: .8s ease-in-out;
-}
-.login label{
-	color: #ff4b2b;
-    padding-top: 0.4em;
-	transform: scale(.6);
-}
-
-#chk:checked ~ .login{
-	transform: translateY(-500px);
-}
-#chk:checked ~ .login label{
-	transform: scale(1);	
-}
-#chk:checked ~ .signup label{
-	transform: scale(.6);
-}
-#password_error{
-	position: fixed;
-	top: 0;
-	color: white;
-	height: 2rem;
-	font-size: 1.2em;
-	padding: 0.8em;
-	font-weight: 600;
 }

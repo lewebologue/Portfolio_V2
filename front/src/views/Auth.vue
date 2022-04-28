@@ -1,27 +1,11 @@
 <template>
     <section>
-		<div id="password_error"></div>
-		<img src="../assets/img/avataaars.svg" alt="ma trogne">
-        <div class="main">  	
-            <input type="checkbox" id="chk" aria-hidden="true">
-            <div class="signup">
-                <form v-on:submit.prevent="signUp">
-                    <label for="chk" aria-hidden="true">Inscription</label>
-                    <input type="text" name="txt" id="firstName" placeholder="Prénom" required v-model="signUpInput.firstName" minlength="2" aria-label="Prénom">
-                    <input type="text" name="txt" placeholder="Nom" required v-model="signUpInput.lastName" minlength="2" aria-label="Nom">
-                    <input type="email" name="email" placeholder="Email" required v-model="signUpInput.email" aria-label="email">
-                    <input type="password" name="pswd" placeholder="Password" required v-model="signUpInput.password" minlength="8" aria-label="mot de passe">
-                    <button>S'inscrire</button>
-                </form>
-            </div>
-            <div class="login">
-                <form v-on:submit.prevent="login">
-                    <label for="chk" aria-hidden="true" class="login--label">Connexion</label>
-                    <input type="email" name="email" placeholder="Email" required v-model="loginInput.email" aria-label="email">
-                    <input type="password" name="pswd" placeholder="Password" required v-model="loginInput.password" minlength="8" aria-label="mot de passe">
-                    <button>Connexion</button>
-                </form>
-            </div>
+        <div class="login">
+            <form v-on:submit.prevent="login">
+                <input type="email" name="email" placeholder="Email" required v-model="loginInput.email" aria-label="email">
+                <input type="password" name="pswd" placeholder="Password" required v-model="loginInput.password" minlength="8" aria-label="mot de passe">
+                <button>Connexion</button>
+            </form>
         </div>
     </section>
 </template>
@@ -35,12 +19,6 @@ export default {
                 "email" : "",
                 "pawword": "",
             },
-            signUpInput: {
-                "firstName": "",
-                "lastName": "",
-                "email": "",
-                "password": ""
-            }
         }
     },
     methods: {
