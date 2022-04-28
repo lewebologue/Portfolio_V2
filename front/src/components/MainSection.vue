@@ -5,11 +5,11 @@
                 <img src="../../src/assets/img/portfolio/cabin.png" alt="">
             </div>
             <div class="card__text">
-                <div class="card__title">
-                    <h2>RESERVIA</h2>
-                </div>
                 <div class="card__description">
-                    <p>Lorem ipsum sit dolor bqmfjlssfbs s sbskjbv ssvjbs vkssvsv </p>
+                    <div class="card__title">
+                        <h2>RESERVIA</h2>
+                        <p>Lorem ipsum sit dolor bqmfjlssfbs s sbskjbv ssvjbs vkssvsv </p>
+                    </div>
                     <div class="card__stack">
                         <i class="fab fa-html5"></i>
                         <i class="fab fa-css3-alt"></i>
