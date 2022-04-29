@@ -17,7 +17,8 @@ export default {
         return {
             loginInput:{
                 "email" : "",
-                "pawword": "",
+                "password": "",
+                "isAdmin": "",
             },
         }
     },
@@ -40,7 +41,7 @@ export default {
                     if(res.userId && res.token){
                         sessionStorage.setItem("userId", res.userId),
                         sessionStorage.setItem("token", res.token),
-                        sessionStorage.setItem("isAdmin", res.isAdmin)
+                        sessionStorage.setItem("isAdmin", res.isAdmin),
                         this.$router.push('/admin')
                     } else{
                         alert("Identifiants incorrects")
