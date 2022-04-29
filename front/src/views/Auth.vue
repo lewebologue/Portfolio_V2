@@ -25,7 +25,7 @@ export default {
         login(){
             const credentials = {
                 "email" : this.loginInput.email,
-                "password": this.loginInput.pawword
+                "password": this.loginInput.password
             }
 
             const url = "http://localhost:3000/api/auth/login";
