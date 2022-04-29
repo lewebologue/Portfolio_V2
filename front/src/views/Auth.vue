@@ -1,9 +1,9 @@
 <template>
     <section>
         <div class="login">
-            <form v-on:submit.prevent="login">
+            <form v-on:submit.prevent="login" class="loginForm">
                 <input type="email" name="email" placeholder="Email" required v-model="loginInput.email" aria-label="email">
-                <input type="password" name="pswd" placeholder="Password" required v-model="loginInput.password" minlength="8" aria-label="mot de passe">
+                <input type="password" name="pswd" placeholder="Mont de passe" required v-model="loginInput.password" minlength="8" aria-label="mot de passe">
                 <button>Connexion</button>
             </form>
         </div>
