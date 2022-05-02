@@ -1,10 +1,14 @@
 <template>
-    <div class="topbar--container">
-        <div class="topbar__title">
+    <div class="topbar--container dashboard">
+        <div class="topbar__title" v-if="this.isAdmin === 'true'">
+            <img src="../../src/assets/img/avataaars.svg" alt="avatar">
+        </div>
+        <div class="topbar__title" v-else>
             <h1>LUDOVIC THUARD</h1>
         </div>
-        <div class="topbar__menu" v-if="(isAdmin == true)">
-            <h3>test</h3>
+        <div class="topbar__menu" v-if="this.isAdmin === 'true'">
+            <router-link to="/" target="_blank" title="Home" aria-label="Retour à l'accueil"><p>VOIR LE SITE</p></router-link>
+            <a title="Disconnect" @click="disconnect()" aria-label="Déconnexion">DECONNEXION</a>
         </div>
         <div class="topbar__menu" v-else>
             <a href="#">PORTFOLIO</a>
@@ -23,6 +27,12 @@ export default {
         return{
             isAdmin : sessionStorage.getItem("isAdmin")
         }
-    }
+    },
+    methods:{
+        disconnect(){ //Déconnexion
+            sessionStorage.clear();
+            this.$router.push('/');
+        }
+    },
 };
 </script>
