@@ -43,13 +43,10 @@ exports.login = (req, res, next) => {
                         return res.status(401).json({error : 'Mot de passe incorrect !'})
                     }
                     res.status(200).json({
-                        userId : user._id,
-                        token : jwt.sign(
-                            {email : user.email, isAdmin : user.isAdmin},
-                            '${process.env.TOKEN}',
-                            {expiresIn : '24h'}
-                        ),
-                    })
+                        userId: user.id,
+                        isAdmin: user.isAdmin,
+                        token: jwt.sign({ userId: user.id, isAdmin: user.isAdmin}, 'process.env.TOKEN',{ expiresIn: '24h' }) //Generation du token d'authentification
+                    });
                 })
                 .catch(error => res.status(500).json({error : error}))
         })
