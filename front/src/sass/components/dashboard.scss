@@ -1,0 +1,64 @@
+main{
+    display: flex;
+    flex-direction: column;
+    .main--dashsection{
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        .side--container {
+            background-color: $background-one;
+            width: 17rem;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5rem;
+            padding-top: 15rem;
+            text-align: center;
+        }
+        button {
+            z-index: 1;
+            position: relative;
+            font-size: 1.5em;
+            font-weight: 600;
+            color: white;
+            padding: 0.5em 1em;
+            outline: none;
+            border: none;
+            background-color: $background-one;
+            margin-left: 0.4em;
+        }
+        
+        button::before {
+            content: '';
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            transform-origin: center left;
+            transform: scaleX(0);
+            transition: transform 0.25s ease-in-out;
+        }
+        
+        button:hover {
+            cursor: pointer;
+            color: $background-one;
+        }
+        
+        button:hover::before {
+            transform-origin: center right;
+            transform: scaleX(1);
+            border-top-left-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+        }
+    }
+    .main--container{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 50rem;
+    }
+}

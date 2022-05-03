@@ -7,8 +7,8 @@
             <h1>LUDOVIC THUARD</h1>
         </div>
         <div class="topbar__menu" v-if="this.isAdmin === 'true'">
-            <router-link to="/" target="_blank" title="Home" aria-label="Retour à l'accueil"><p>VOIR LE SITE</p></router-link>
-            <a title="Disconnect" @click="disconnect()" aria-label="Déconnexion">DECONNEXION</a>
+            <router-link to="/" target="_blank" title="Home"><p>VOIR LE SITE</p></router-link>
+            <a title="Disconnect" @click="disconnect()">DECONNEXION</a>
         </div>
         <div class="topbar__menu" v-else>
             <a href="#">PORTFOLIO</a>
