@@ -25,6 +25,7 @@
 .dashboard{
     display: flex;
     justify-content: space-between;
+    z-index: 1;
     img{
         width: 10rem;
         margin-top: 5rem;

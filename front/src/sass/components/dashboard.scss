@@ -2,13 +2,12 @@ main{
     display: flex;
     flex-direction: column;
     .main--dashsection{
-        display: flex;
-        justify-content: space-between;
         background-color: white;
+        height: 100vh;
+        display: flex;
         .side--container {
             background-color: $background-one;
             width: 17rem;
-            height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -56,9 +55,61 @@ main{
         }
     }
     .main--container{
+        width: 80%;
+        margin: 10rem auto 0 auto;
         display: flex;
-        align-items: center;
         justify-content: space-around;
-        width: 50rem;
+        .contact--container{
+            background-color: $background-one;
+            width: 35vw;
+            height: 40vh;
+            border-radius: 1rem;
+            padding-top: 0.5rem;
+            .contact__title{
+                color: white;
+                font-weight: 600;
+                font-size: 1.2em;
+                text-align: center;
+            }
+            .list__container{
+                height: 35vh;
+                background-color: white;
+                margin: 0.8rem;
+                border-radius: 1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .content__list{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    padding-top: 0.5rem;
+                    .date{
+                        font-weight: 600;
+                    }
+                    .accessButton{
+                        text-decoration: unset;
+                        color: white;
+                        background-color: $background-one;
+                        font-weight: 600;
+                        width: 5rem;
+                        text-align: center;
+                        padding: 0.8rem;
+                        border-radius: 1rem;
+                    }
+                }
+            }
+            .allButton{
+                align-self: center;
+                margin-bottom: 0.5em;
+                width: 90%;
+                border-radius: 1rem;
+                background-color: $background-one;
+                &:hover{
+                    background-color: lighten($color: $background-one, $amount: 5);
+                    color: white;
+                }
+            }
+        }
     }
 }
