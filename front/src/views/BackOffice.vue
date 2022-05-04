@@ -23,7 +23,7 @@
                                 <a href="#" class="accessButton">VOIR</a>
                             </div>
                             <div class="allButton">
-                                <a class="allButton">TOUT VOIR</a>
+                                <a class="btn">TOUT VOIR</a>
                             </div>
                         </div>
                     </div>

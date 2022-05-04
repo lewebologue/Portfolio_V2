@@ -27,7 +27,6 @@ main{
             background-color: $background-one;
             margin-left: 0.4em;
         }
-        
         button::before {
             content: '';
             z-index: -1;
@@ -100,14 +99,22 @@ main{
                 }
             }
             .allButton{
-                align-self: center;
-                margin-bottom: 0.5em;
                 width: 90%;
-                border-radius: 1rem;
-                background-color: $background-one;
-                &:hover{
-                    background-color: lighten($color: $background-one, $amount: 5);
+                display: flex;
+                margin: auto auto 0.8rem auto;
+                .btn{
+                    width: 100%;
+                    margin: auto;
                     color: white;
+                    background-color: $background-one;
+                    padding: 0.5rem;
+                    border-radius: 1rem;
+                    text-align: center;
+                    font-weight: 600;
+                    &:hover{
+                        background-color: lighten($color: $background-one, $amount: 5);
+                        cursor: pointer;
+                    }
                 }
             }
         }
