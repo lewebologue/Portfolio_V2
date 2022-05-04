@@ -7,6 +7,7 @@ const contactSchema = mongoose.Schema({
     company : { type: String, required: false },
     phone: { type: String, required: false },
     message: { type: String, required: true },
+    date: { type: Date, default: Date.now }
 });
 
 module.exports = mongoose.model('Form', contactSchema);

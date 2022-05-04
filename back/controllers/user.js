@@ -45,7 +45,7 @@ exports.login = (req, res, next) => {
                     res.status(200).json({
                         userId: user.id,
                         isAdmin: user.isAdmin,
-                        token: jwt.sign({ userId: user.id, isAdmin: user.isAdmin}, 'process.env.TOKEN',{ expiresIn: '24h' }) //Generation du token d'authentification
+                        token: jwt.sign({ userId: user.id, isAdmin: user.isAdmin}, process.env.TOKEN ,{ expiresIn: '24h' }) //Generation du token d'authentification
                     });
                 })
                 .catch(error => res.status(500).json({error : error}))

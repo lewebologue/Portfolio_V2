@@ -17,9 +17,9 @@
                             <h2>DERNIERES DEMANDES</h2>
                         </div>
                         <div class="list__container">
-                            <div class="content__list">
-                                <div class="date">02/05/2022</div>
-                                <div class="mail">test@mail.com</div>
+                            <div class="content__list" v-for="form in forms" :key="form.id">
+                                <div class="date">{{new Date(form.date).toLocaleDateString("fr-FR")}}</div>
+                                <div class="mail">{{form.email}}</div>
                                 <a href="#" class="accessButton">VOIR</a>
                             </div>
                             <div class="allButton">
@@ -32,6 +32,17 @@
                     <div class="contact--container">
                         <div class="contact__title">
                             <h2>DERNIERS ELEMENTS</h2>
+                        </div>
+                        <div class="list__container">
+                            <div class="content__list">
+                                <div class="name"></div>
+                                <a href="#" class="accessButton">VOIR</a>
+                                <a href="#" class="accessButton">MODIFIER</a>
+                                <a href="#" class="accessButton">SUPPRIMER</a>
+                            </div>
+                            <div class="allButton">
+                                <a class="btn">TOUT VOIR</a>
+                            </div>
                         </div>
                     </div>
                 </div>

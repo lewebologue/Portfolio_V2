@@ -86,12 +86,16 @@ main{
                     .date{
                         font-weight: 600;
                     }
+                    .mail{
+                        width: 50%;
+                    }
                     .accessButton{
                         text-decoration: unset;
                         color: white;
                         background-color: $background-one;
                         font-weight: 600;
                         width: 5rem;
+                        height: 1rem;
                         text-align: center;
                         padding: 0.8rem;
                         border-radius: 1rem;
