@@ -51,8 +51,29 @@ export default {
     
     data() {
         return {
-
+          forms: [],
+          elements: []  
         }
     },
+    methods: {
+        getAllForms(){
+            const url = "http://localhost:3000/api/forms";
+            const options = {
+                method: "GET",
+                headers: {
+                    "Authorization" : "Bearer " + sessionStorage.getItem("token")
+                }
+            };
+            fetch(url, options)
+                .then(response => response.json())
+                .then(data =>{
+                    this.forms = data;
+                })
+                .catch(error => console.log(error));
+        }
+    },
+    created: function(){
+        this.getAllForms();
+    }
 }
 </script>
