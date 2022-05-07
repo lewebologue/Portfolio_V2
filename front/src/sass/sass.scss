@@ -1,11 +1,13 @@
 @import './base/colors.scss';
 @import './base/fonts.scss';
+@import './base/shadows.scss';
 
 @import './components/topbar.scss';
 @import './components/hero.scss';
 @import './components/main.scss';
 @import './components/AuthPage.scss';
 @import './components/dashboard.scss';
+@import './components/contentCard.scss';
 
 
 @import './utils/reset.scss';

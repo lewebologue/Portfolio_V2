@@ -1,0 +1,15 @@
+.card--container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $card-background;
+    box-shadow: $shadow;
+    width: 25rem;
+    .card__image{
+        width: 20rem;
+        object-fit: cover;
+        img{
+            width: 22rem;
+        }
+    }
+}
