@@ -1,15 +1,16 @@
 .card--container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background-color: $card-background;
-    box-shadow: $shadow;
-    width: 25rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 20rem;
+    padding: 0.8rem;
     .card__image{
-        width: 20rem;
-        object-fit: cover;
+        background-color: white;
         img{
-            width: 22rem;
+            width: 18rem;
+            object-fit: contain;
         }
     }
 }
