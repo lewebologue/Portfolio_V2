@@ -6,6 +6,7 @@ const contentSchema = mongoose.Schema({
     image: { type: String, required: false },
     stack: { type: Array, required: false },
     url: { type: String, required: false },
+    altTxt: { type: String, required: false },
 });
 
 module.exports = mongoose.model('Content', contentSchema);
