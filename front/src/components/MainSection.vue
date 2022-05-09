@@ -1,14 +1,14 @@
 <template>
     <div class="main--container">
-        <div class="card--container">
+        <div class="card--container" v-for="element in elements" :key="element.id">
             <div class="card__image">
-                <img src="../../src/assets/img/portfolio/cabin.png" alt="">
+                <img src="{{element.image}}" alt="{{element.altTxt}}">
             </div>
             <div class="card__text">
                 <div class="card__description">
                     <div class="card__title">
-                        <h2>RESERVIA</h2>
-                        <p>Lorem ipsum sit dolor bqmfjlssfbs s sbskjbv ssvjbs vkssvsv </p>
+                        <h2>{{element.title}}</h2>
+                        <p>{{element.description}}</p>
                     </div>
                     <div class="card__stack">
                         <i class="fab fa-html5"></i>
@@ -32,7 +32,7 @@ export default {
         }
     },
     mounted() {
-        const url = "http://localhost:3000/content"
+        const url = "http://localhost:3000/api/content/"
         const options = {
             method: "GET",
             headers:{
