@@ -7,6 +7,7 @@
             <h1>LUDOVIC THUARD</h1>
         </div>
         <div class="topbar__menu" v-if="this.isAdmin === 'true'">
+            <router-link to="/admin" title="Home" @click="resetDashboard"><p>ACCUEIL DASHBOARD</p></router-link>
             <router-link to="/" target="_blank" title="Home"><p>VOIR LE SITE</p></router-link>
             <a title="Disconnect" @click="disconnect()">DECONNEXION</a>
         </div>
@@ -32,7 +33,11 @@ export default {
         disconnect(){ //Déconnexion
             sessionStorage.clear();
             this.$router.push('/');
-        }
+        },
+        resetDashboard(){ //Reset dashboard
+            document.getElementById("mainDash").classList.remove('hide');
+            document.getElementById("addForm").classList.add('hide');
+        },
     },
-};
+}
 </script>

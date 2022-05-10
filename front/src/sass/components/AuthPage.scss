@@ -1,17 +1,17 @@
 section{
-	background-color: $background-one;
 	height: 100vh;
+	background-color: $background-one;
 	.login{
-		position: absolute;
-		top: 50%;
-		left: 50%;
+		width: 15rem;
+		padding: 1rem;
 		background-color: white;
-		border-radius: 0.8rem;
-	}
-	.loginForm{
-		display: flex;
-		flex-direction: column;
-		margin: 2rem;
-		gap: 1rem;
+		box-shadow: $shadow;
+		border-radius: 1rem;
+		.loginForm{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			gap: 1rem;
+		}
 	}
 }

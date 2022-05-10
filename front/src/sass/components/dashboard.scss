@@ -121,6 +121,41 @@ main{
                     }
                 }
             }
+            .list__child-container{
+                display: flex;
+                justify-content: space-between!important;
+                margin: 0.5rem;
+                font-weight: 600;
+            }
+            .content__icon{
+                display: flex;
+                justify-content: space-around;
+                gap: 1.5rem;
+            }
+            .fa-eye{
+                color: green;
+                font-size: 1.5em;
+                &:hover{
+                    color: lighten($color: green, $amount: 5)
+                }
+            }
+            .fa-pen-to-square{
+                color: orange;
+                font-size: 1.5em;
+                &:hover{
+                    color: lighten($color: orange, $amount: 5)
+                }
+            }
+            .fa-trash-can{
+                color: red;
+                font-size: 1.5em;
+                &:hover{
+                    color: lighten($color: red, $amount: 5)
+                }
+            }
         }
     }
+}
+.hide{
+    display: none!important;
 }
