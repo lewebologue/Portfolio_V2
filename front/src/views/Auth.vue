@@ -1,5 +1,8 @@
 <template>
     <section>
+        <div class="logo">
+            <img src="../../src/assets/img/avataaars.svg" alt="logo">
+        </div>
         <div class="login">
             <form v-on:submit.prevent="login" class="loginForm">
                 <input type="email" name="email" placeholder="Email" required v-model="loginInput.email" aria-label="email">

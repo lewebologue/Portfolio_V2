@@ -1,12 +1,19 @@
 section{
 	height: 100vh;
 	background-color: $background-one;
+	.logo{
+		width: 15rem;
+		margin: auto;
+		padding-top: 5rem;
+		padding-bottom: 3rem;
+	}
 	.login{
 		width: 15rem;
 		padding: 1rem;
 		background-color: white;
 		box-shadow: $shadow;
 		border-radius: 1rem;
+		margin: auto;
 		.loginForm{
 			display: flex;
 			flex-direction: column;
