@@ -1,6 +1,7 @@
 //Modules
 const express = require('express');
 const mongoose = require('mongoose');
+const path = require('path');
 
 const mongoConnect = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@${process.env.DB_CLUSTER}.qwua6.mongodb.net/${process.env.DB_NAME}?${process.env.DB_SET}`
 
@@ -22,6 +23,9 @@ app.use((req, res, next) => {
 });
 
 app.use(express.json());
+
+app.use('/images', express.static(path.join(__dirname, 'images')));
+
 app.use('/api', require('./routes/form'));
 app.use('/api/auth', require('./routes/user'));
 app.use('/api/content', require('./routes/content'));

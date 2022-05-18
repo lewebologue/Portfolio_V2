@@ -1,5 +1,6 @@
 <template>
     <div class="main--container">
+        <h2>PORTFOLIO</h2>
         <div class="card--container" v-for="element in elements" :key="element.id">
             <div class="card__image">
                 <img src="{{element.image}}" alt="{{element.altTxt}}">

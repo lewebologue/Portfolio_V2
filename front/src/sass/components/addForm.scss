@@ -1,3 +1,25 @@
 .add-main-container{
-    border: 1px solid red;
+    width: 100%;
+    margin: auto;
+    .container{
+        border: 1px solid red;
+        background-color: $background-one;
+        width: 50%;
+        border-radius: 1rem;
+        padding-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: auto;
+        .container--title{
+            color: white;
+            font-size: 2em;
+            font-weight: 600;
+            margin: 1rem 0 1rem 0;
+        }
+        .addform{
+            display: flex;
+            flex-direction: column;
+        }
+    }
 }
