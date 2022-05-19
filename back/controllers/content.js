@@ -1,17 +1,17 @@
-const mongoose = require('mongoose');
 const Content = require('../models/contentModel');
 const fs = require('fs');
 
+//create new element with image
 exports.createElement = (req, res, next) => {
-    const elementObject = req.body.content;
-    delete elementObject._id;
-    const element = new Content({
-        ...elementObject,
+    const contentObject = JSON.parse(req.body.content);
+    delete contentObject._id;
+    const content = new Content({
+        ...contentObject,
         image: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
-    })
-    element.save()
-        .then(() => res.status(201).json({ message: 'Element created',}))
-        .catch((error) => res.status(403).json({error: error, message: "Unsuffisant permissions"}));
+    });
+    content.save()
+        .then(() => res.status(201).json({ message: 'Content created successfully' }))
+        .catch(error => res.status(400).json({ error }));
 };
 
 exports.modifyElement = (req, res, next) => {
