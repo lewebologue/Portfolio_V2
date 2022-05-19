@@ -3,6 +3,10 @@ const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
 
+const contentRoutes = require('./routes/content');
+const userRoutes = require('./routes/user');
+const formRoutes = require('./routes/form');
+
 const mongoConnect = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@${process.env.DB_CLUSTER}.qwua6.mongodb.net/${process.env.DB_NAME}?${process.env.DB_SET}`
 
 mongoose.connect(mongoConnect, { 
@@ -26,8 +30,8 @@ app.use(express.json());
 
 app.use('/images', express.static(path.join(__dirname, 'images')));
 
-app.use('/api', require('./routes/form'));
-app.use('/api/auth', require('./routes/user'));
-app.use('/api/content', require('./routes/content'));
+app.use('/api/form', formRoutes);
+app.use('/api/auth', userRoutes);
+app.use('/api/content', contentRoutes);
 
 module.exports = app;

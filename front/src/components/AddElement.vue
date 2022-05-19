@@ -34,10 +34,10 @@ export default {
             }else{
                 let input = document.getElementById("imageUrl");
                 let formData = new FormData();
-                formData.append("title", this.title);
-                formData.append("description", this.description);
-                formData.append("url", this.url);
-                formData.append("image", input.files[0]);
+                formData.append('title', this.title);
+                formData.append('description', this.description);
+                formData.append('url', this.url);
+                formData.append('image', input.files[0]);
 
                 const url = "http://localhost:3000/api/content/new";
                 const options = {
@@ -45,12 +45,12 @@ export default {
                     body: formData,
                     headers: {
                         //"Content-Type": "multipart/form-data",
-                        "Authorization": "Bearer " + sessionStorage.getItem("token")
+                        'Authorization': 'Bearer ' + sessionStorage.getItem("token")
                     }
                 }
                 fetch(url, options)
                 .then(()=>alert("Votre contenu a bien été ajouté"))
-                .catch(error => console.error(error))
+                .catch(error => console.error({cause: error}))
             }
         },
     }
