@@ -44,12 +44,12 @@ export default {
                     method: "POST",
                     body: formData,
                     headers: {
-                        //"Content-Type": "multipart/form-data",
                         'Authorization': 'Bearer ' + sessionStorage.getItem("token")
                     }
                 }
                 fetch(url, options)
                 .then(()=>alert("Votre contenu a bien été ajouté"))
+                .then((window.location.reload()))
                 .catch(error => console.error({cause: error}))
             }
         },

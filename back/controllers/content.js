@@ -3,7 +3,7 @@ const fs = require('fs');
 
 //create new element with image
 exports.createElement = (req, res, next) => {
-    const contentObject = JSON.parse(req.body.content);
+    const contentObject = req.body;
     delete contentObject._id;
     const content = new Content({
         ...contentObject,
