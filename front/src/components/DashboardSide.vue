@@ -17,6 +17,10 @@ export default {
             document.getElementById("mainDash").classList.add('hide');
             document.getElementById("addForm").classList.remove('hide');
         },
+        AllFormsAccess(){
+            document.getElementById("mainDash").classList.add('hide');
+            document.getElementById("allForms").classList.remove('hide-list');
+        }
     },
 }
 </script>
