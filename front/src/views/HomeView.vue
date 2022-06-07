@@ -3,6 +3,7 @@
     <Topbar/>
     <HeroComp/>
     <MainSection/>
+    <AllForms/>
   </div>
 </template>
 
@@ -12,6 +13,7 @@
 import Topbar from '@/components/Topbar.vue';
 import HeroComp from '@/components/HeroComp.vue';
 import MainSection from '@/components/MainSection.vue';
+import AllForms from '@/components/AllForms.vue';
 
 export default {
   name: 'HomeView',
@@ -19,6 +21,7 @@ export default {
     Topbar,
     HeroComp,
     MainSection,
+    AllForms
   }
 }
 </script>

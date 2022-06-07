@@ -4,7 +4,7 @@
             <button @click.prevent="hideMainContainer()">AJOUTER UN ELEMENT</button>
         </div>
         <div class="sidelink">
-            <button>DEMANDES DE CONTACT</button>
+            <button @click="AllFormsAccess()">DEMANDES DE CONTACT</button>
         </div>
     </aside>
 </template>
