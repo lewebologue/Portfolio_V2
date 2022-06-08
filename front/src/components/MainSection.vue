@@ -13,14 +13,6 @@
                         <h2>{{element.title}}</h2>
                         <p>{{element.description}}</p>
                     </div>
-                    <!--div class="card__stack">
-                        <i class="fab fa-html5"></i>
-                        <i class="fab fa-css3-alt"></i>
-                        <i class="fab fa-js-square"></i>
-                    </div-->
-                </div>
-                <div class="card__button">
-                    <a href="#">Voir plus</a>
                 </div>
             </div>
         </div>

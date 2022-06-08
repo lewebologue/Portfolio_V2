@@ -24,6 +24,9 @@
         width: 20rem;
         padding: 0.8rem;
         margin-top: 1rem;
+        &:hover{
+            cursor: pointer;
+        }
         .card__image{
             background-color: white;
             img{
@@ -47,24 +50,6 @@
             h2{
                 font-weight: 600;
                 font-size: 1.2em;
-            }
-        }
-        .card__stack{
-            width: 5%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            .fab{
-                font-size: 1.2em;
-            }
-            .fa-html5{
-                color: orangered;
-            }
-            .fa-css3-alt{
-                color: blue;
-            }
-            .fa-js-square{
-                color: rgb(253, 236, 0);
             }
         }
         &:hover{
