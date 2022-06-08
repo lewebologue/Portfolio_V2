@@ -4,6 +4,7 @@
         <section class="main--dashsection">
             <DashboardSide/>
             <AddElement/>
+            <AllForms/>
             <div class="main--container" id="mainDash">
                 <div>
                     <div class="contact--container">
@@ -50,6 +51,7 @@
 import TopBar from '@/components/Topbar.vue';
 import DashboardSide from '@/components/DashboardSide.vue';
 import AddElement from '@/components/AddElement.vue';
+import AllForms from '@/components/AllForms.vue';
 
 export default {
     name: "BackOffice",
@@ -57,6 +59,7 @@ export default {
         TopBar,
         DashboardSide,
         AddElement,
+        AllForms,
     },
     
     data() {

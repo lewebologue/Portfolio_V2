@@ -3,15 +3,18 @@
     <Topbar/>
     <HeroComp/>
     <MainSection/>
+    <AboutSection/>
+    <FooterSection/>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
 
 import Topbar from '@/components/Topbar.vue';
 import HeroComp from '@/components/HeroComp.vue';
 import MainSection from '@/components/MainSection.vue';
+import AboutSection from '@/components/AboutSection.vue';
+import FooterSection from '@/components/FooterSection.vue';
 
 export default {
   name: 'HomeView',
@@ -19,6 +22,8 @@ export default {
     Topbar,
     HeroComp,
     MainSection,
+    AboutSection,
+    FooterSection,
   }
 }
 </script>

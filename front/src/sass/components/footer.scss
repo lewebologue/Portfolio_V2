@@ -1,0 +1,30 @@
+.footer--container{
+    height: 23rem;
+    background-color: $footer-color;
+    color: white;
+    font-family: lato;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5rem;
+    .footer-location{
+        font-size: 1.5em;
+        font-weight: 600;
+        text-align: center;
+        line-height: 1.8rem;
+    }
+    .footer-social{
+        @extend .footer-location;
+        .social-link{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 0.8em;
+            .fa-brands{
+                color: white;
+                font-size: 1.8em;
+            }
+        }
+    }
+    .footer-title{
+        @extend .footer-location;
+    }
+}

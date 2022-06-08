@@ -1,0 +1,42 @@
+.about--container{
+    height: 38.5rem;
+    background-color: $background-one;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-family: lato;
+    .about__title{
+        font-size: 2.5em;
+        color: white;
+        font-weight: 600;
+    }
+    .about__content{
+        color: white;
+        width: 60%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 1.6em;
+        text-align: justify;
+        .text{
+            width: 45%;
+        }
+    }
+    button{
+        height: 4rem;
+        width: 17rem;
+        background: $background-one;
+        border: 2px solid white;
+        border-radius: 0.8rem;
+        color: white;
+        font-size: 1.4em;
+        font-weight: 600;
+        &:hover{
+            border: 2px solid $background-one;
+            background-color: white;
+            color: $background-one;
+            cursor: pointer;
+        }
+    }
+}
